@@ -1,0 +1,428 @@
+/* vendas.css - Landing Page Premium */
+
+:root {
+    --bg-main: #060910;
+    --bg-card: #0e131f;
+    --accent-gold: #ffbd00;
+    --accent-gold-hover: #e6aa00;
+    --accent-purple: #8b5cf6;
+    --accent-purple-glow: rgba(139, 92, 246, 0.2);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
+    --radius-xl: 32px;
+    --radius-lg: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, .logo {
+    font-family: 'Outfit', sans-serif;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.text-center { text-align: center; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+
+/* Navbar */
+.navbar {
+    padding: 24px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(6, 9, 16, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-gold), #fff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Buttons */
+.btn-secondary {
+    padding: 10px 20px;
+    border: 1px solid var(--accent-gold);
+    color: var(--accent-gold);
+    text-decoration: none;
+    border-radius: 40px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn-secondary:hover {
+    background: var(--accent-gold);
+    color: var(--bg-main);
+}
+
+.btn-primary-lg {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-gold), #ffda70);
+    color: #111;
+    padding: 20px 48px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0 0 30px rgba(255, 189, 0, 0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 16px;
+}
+
+.btn-primary-lg:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 50px rgba(255, 189, 0, 0.6);
+}
+
+.btn-primary-xl {
+    display: block;
+    background: linear-gradient(135deg, var(--accent-gold), #fff);
+    color: #000;
+    padding: 24px;
+    border-radius: 16px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 22px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.btn-primary-xl:hover {
+    filter: brightness(1.1);
+    transform: scale(1.02);
+}
+
+/* Hero */
+.hero {
+    padding: 180px 0 100px;
+    background: radial-gradient(circle at center, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+}
+
+.badge {
+    background: rgba(255, 189, 0, 0.1);
+    color: var(--accent-gold);
+    padding: 8px 16px;
+    border-radius: 40px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255, 189, 0, 0.3);
+    margin-bottom: 24px;
+    display: inline-block;
+}
+
+.hero-title {
+    font-size: 56px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: var(--text-secondary);
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+.cta-subtext {
+    font-size: 14px;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Mockup */
+.preview {
+    padding-bottom: 100px;
+}
+
+.mockup-container {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent);
+    padding: 20px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
+}
+
+.mockup-screen {
+    background: #111827;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mockup-header {
+    background: #1f2937;
+    padding: 12px 16px;
+    display: flex;
+}
+
+.mockup-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.mockup-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4b5563;
+}
+
+.mockup-dashboard-layout {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.mockup-card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.mockup-card {
+    height: 100px;
+    background: #374151;
+    border-radius: 12px;
+    opacity: 0.5;
+}
+
+.mockup-chart {
+    height: 200px;
+    background: linear-gradient(to top, rgba(139, 92, 246, 0.1), rgba(139, 92, 246, 0.3));
+    border-radius: 12px;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+}
+
+/* Benefits */
+.benefits {
+    padding: 100px 0;
+    background: #090e18;
+}
+
+.section-header h2 {
+    font-size: 40px;
+    margin-bottom: 16px;
+}
+
+.section-header p {
+    color: var(--text-secondary);
+    margin-bottom: 60px;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.benefit-card {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s;
+}
+
+.benefit-card:hover {
+    border-color: var(--accent-gold);
+    transform: translateY(-5px);
+}
+
+.benefit-card i {
+    font-size: 32px;
+    color: var(--accent-gold);
+    margin-bottom: 24px;
+    display: block;
+}
+
+.benefit-card h3 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.benefit-card p {
+    color: var(--text-secondary);
+}
+
+/* Pricing */
+.pricing {
+    padding: 100px 0;
+}
+
+.pricing-card {
+    background: linear-gradient(135deg, #161d2f, #0b0f19);
+    padding: 60px;
+    border-radius: var(--radius-xl);
+    border: 2px solid var(--accent-gold);
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 0 0 100px rgba(139, 92, 246, 0.1);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-gold);
+    color: #000;
+    padding: 10px 24px;
+    border-radius: 40px;
+    font-weight: 800;
+    font-size: 14px;
+    box-shadow: 0 10px 20px rgba(255, 189, 0, 0.3);
+}
+
+.pricing-header h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.pricing-header p {
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+}
+
+.pricing-price {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.currency { font-size: 24px; font-weight: 600; vertical-align: top; margin-top: 10px; }
+.value { font-size: 80px; font-weight: 800; letter-spacing: -3px; }
+.period { font-size: 18px; color: var(--text-secondary); font-weight: 600; }
+
+.pricing-features {
+    list-style: none;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+}
+
+.pricing-features i { color: var(--accent-gold); }
+
+.pricing-recurring {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+.pricing-guarantee {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+/* FAQ */
+.faq {
+    padding: 100px 0;
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.faq-item h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.faq-item p {
+    color: var(--text-secondary);
+}
+
+/* Footer */
+.footer {
+    padding: 80px 0;
+    background: #04060b;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.logo-footer {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--text-secondary);
+}
+
+.footer-links {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-title { font-size: 40px; }
+    .benefits-grid, .faq-grid, .pricing-features { grid-template-columns: 1fr; }
+    .pricing-card { padding: 40px 24px; }
+}
